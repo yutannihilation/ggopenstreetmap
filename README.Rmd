@@ -1,0 +1,36 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+# ggopenstreetmap
+
+An experimental package to plot map.
+
+## Installation
+
+``` r
+devtools::install_github("yutannihilation/ggopenstreetmap")
+```
+
+## Example
+
+```{r example}
+library(ggplot2)
+library(ggopenstreetmap)
+
+nc <- sf::st_read(system.file("shape/nc.shp", package = "sf"), quiet = TRUE)
+
+ggplot(nc) +
+  annotation_osm(nc) +
+  geom_sf(aes(fill = AREA), alpha = 0.5)
+```

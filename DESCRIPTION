@@ -1,0 +1,14 @@
+Package: ggopenstreetmap
+Type: Package
+Title: 'OpenStreetMap' Tiles For 'geom_sf()'
+Version: 0.0.0.9000
+Author: Hiroaki Yutani
+Maintainer: Hiroaki Yutani <yutani.ini@gmail.com>
+Description: Plot 'OpenStreetMap' tiles on 'ggplot2' for background. 
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    purrr,
+    glue
+RoxygenNote: 6.0.1.9000
