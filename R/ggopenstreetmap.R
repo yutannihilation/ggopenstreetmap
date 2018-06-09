@@ -1,7 +1,7 @@
 #' Plot OpenStreetMap Tiles On 'ggplot2'
 #'
 #' @param obj A `sf` object.
-#' @param zoom Additional zoom level.
+#' @param zoomin Additional zoom level.
 #' @examples
 #' library(ggplot2)
 #' nc <- sf::st_read(system.file("shape/nc.shp", package = "sf"), quiet = TRUE)
@@ -9,7 +9,7 @@
 #'   annotation_osm(nc) +
 #'   geom_sf(aes(fill = AREA), alpha = 0.5)
 #' @export
-annotation_osm <- function(obj, zoom = +2) {
+annotation_osm <- function(obj, zoomin = +2) {
   bbox <- sf::st_bbox(obj)
   width_or_height <- max(bbox["xmax"] - bbox["xmin"], bbox["ymax"] - bbox["ymin"])
   zoom <- sum(width_or_height < 360 / 2^(0:19)) - 1 + zoom

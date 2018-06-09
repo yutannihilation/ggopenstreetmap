@@ -4,12 +4,12 @@
 \alias{annotation_osm}
 \title{Plot OpenStreetMap Tiles On 'ggplot2'}
 \usage{
-annotation_osm(obj, zoom = +2)
+annotation_osm(obj, zoomin = +2)
 }
 \arguments{
 \item{obj}{A `sf` object.}
 
-\item{zoom}{Additional zoom level.}
+\item{zoomin}{Additional zoom level.}
 }
 \description{
 Plot OpenStreetMap Tiles On 'ggplot2'
