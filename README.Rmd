@@ -24,7 +24,7 @@ devtools::install_github("yutannihilation/ggopenstreetmap")
 
 ## Example
 
-```{r example, fig.height=10, fig.width=10}
+```{r example}
 library(ggplot2)
 library(ggopenstreetmap)
 

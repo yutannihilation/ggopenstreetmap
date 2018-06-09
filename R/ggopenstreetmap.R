@@ -57,7 +57,9 @@ xy2pngs <- function(x, y, zoom) {
 xy2gg <- function(x, y, zoom) {
   pngs <- xy2pngs(x, y, zoom = zoom)
   positions <- purrr::map2(x, y, xy2lonlats, zoom = zoom)
-  purrr::map2(pngs, positions, ~ ggplot2::annotation_raster(.x, xmin = .y$xmin, ymin = .y$ymin, xmax = .y$xmax, ymax = .y$ymax))
+  purrr::map2(pngs, positions,
+              ~ ggplot2::annotation_raster(.x, xmin = .y$xmin, ymin = .y$ymin, xmax = .y$xmax, ymax = .y$ymax,
+                                           interpolate = TRUE))
 }
 
 xy2lonlat <- function(x, y, zoom) {
