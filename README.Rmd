@@ -14,7 +14,7 @@ knitr::opts_chunk$set(
 ```
 # ggopenstreetmap
 
-An experimental package to plot map.
+An experimental package to plot OpenStreetMap tiles with `geom_sf()`.
 
 ## Installation
 
@@ -24,7 +24,7 @@ devtools::install_github("yutannihilation/ggopenstreetmap")
 
 ## Example
 
-```{r example}
+```{r example, fig.height=10, fig.width=10}
 library(ggplot2)
 library(ggopenstreetmap)
 
