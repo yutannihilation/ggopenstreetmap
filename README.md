@@ -3,6 +3,8 @@
 ggopenstreetmap
 ===============
 
+**This package is under heavy development; do not use!**
+
 An experimental package to plot OpenStreetMap tiles with `geom_sf()`.
 
 Installation
